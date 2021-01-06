@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Migration Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    .padded {
+      padding-top: 75px;
+    }
+    
+    .padded_special {
+        padding-top: 15px;
+        padding-right: 15px;
+    }
+
+    .purp {
+      background-color: #22284a;
+    }
+
+    .white {
+        color: white;
+    }
+
+    .well {
+        background-color: white;
+        box-shadow: 0px 0px 7px 5px #dcdcdc;
+    }
+
+    body {
+        background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <nav class="navbar navbar-light navbar-fixed-top purp">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle viol" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                        <p class="navbar-brand white" >MIGRATION FLOW FROM CALIFORNIA TO OTHER STATES</p>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p class="white padded_special">GROUP FOUR</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="row container-fluid padded">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <img src="./static/js/corr_study.png" class="img-responsive" style="width:90%" alt="Image">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div id="line-plot"></div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card">
+                        <h3>Poverty & Unemployment</h3>
+                        <div class="card-header">
+                            <div class="">Enter Input Here</div>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Enter State"
+                              id="state-input"
+                            />
+                            <div class="card-text">Please enter a state to view data</div>
+                            <button id="search-btn" class="btn btn-primary">View</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row container-fluid">
+                <div class="col-sm-2">
+                    <div class="card">
+                        <h3>Flow To Other States</h3>
+                        <form id="slist2">
+                            <div class="form-group">
+                                <label for="sel1">Select a Year</label>
+                                <select class="form-control" id="sel1">
+                                    <option>2010</option>
+                                    <option>2011</option>
+                                    <option>2012</option>
+                                    <option>2013</option>
+                                    <option>2014</option>
+                                    <option>2015</option>
+                                    <option>2016</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>                                
+                                </select>
+                                <br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div id="choro"></div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div id="line_age"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./static/js/age.js"></script>
+    <script src="./static/js/apps.js"></script>
+    <script src="./static/js/census_df.json"></script>
+    <script src="./static/js/appsh.js"></script>
+</body>
+</html>
